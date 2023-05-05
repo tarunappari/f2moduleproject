@@ -41,7 +41,7 @@ async function filterData(){
     let data = await loadDefaultData();
     tbody.innerHTML='';
     let resultstudents = data.filter((item)=>{
-        if(searchstring.value === `${item.last_name}`.toLowerCase() || searchstring.value === `${item.first_name}`.toLowerCase()|| searchstring.value === `${item.email}`.toLowerCase()){
+        if(searchstring.value.toLowerCase() === `${item.last_name}`.toLowerCase() || searchstring.value.toLowerCase() === `${item.first_name}`.toLowerCase()|| searchstring.value.toLowerCase() === `${item.email}`.toLowerCase()){
             return true;
         }
     })
